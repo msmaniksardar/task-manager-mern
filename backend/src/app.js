@@ -8,6 +8,7 @@ import xss from "xss-clean";
 import createHttpError from "http-errors";
 import rateLimit from "express-rate-limit";
 import { REQUEST_LIMIT_NUMBER, REQUEST_SIZE_LIMIT, REQUEST_TIME_LIMIT, URL_ENCODED, WEB_CACHE } from "./config/config.js";
+import { router } from './routes/api.js';
 
 export const app = express();
 
@@ -33,6 +34,9 @@ app.use(bodyParser.json());
 
 // WEB CACHE 
 app.set("etag", WEB_CACHE)
+
+// ROUTE USE 
+app.use("/api" , router);
 
 
 // Handle Client errors
