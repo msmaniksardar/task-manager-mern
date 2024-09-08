@@ -1,0 +1,14 @@
+ # Project Structure
+ 1.Project Setup
+ 2.Postman Setup
+ 3.User Register
+ 4.User Login and create jtw token
+ 5.User Profile Details
+ 6.User Profile Update
+ 7.Send Email with Code
+ 8.Verify Code
+ 9.reset password
+ 10.Create Task by user
+ 11.Update Task Status
+ 12.Task List By Status
+ 13.Count Task

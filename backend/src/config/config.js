@@ -10,9 +10,9 @@ export const REQUEST_TIME_LIMIT = Number(process.env.REQUEST_TIME_LIMIT) || 15 *
 export const REQUEST_LIMIT_NUMBER = Number(process.env.REQUEST_LIMIT_NUMBER) || 300;
 export const REQUEST_SIZE_LIMIT = process.env.REQUEST_SIZE_LIMIT || '50mb';
 export const WEB_CACHE = process.env.WEB_CACHE === 'true'; // Converts to boolean
-export const JWT_SCRECT_KEY = process.env.JWT_SCRECT_KEY || "amarsonarbangla@@11349";
-export const JWT_EXPIRE_TIME = process.env.JWT_EXPIRE_TIME || 30 * 24 * 60 * 1000 ;
-export const EMAIL_HOST = process.env.EMAIL_HOST 
-export const EMAIL_PORT = process.env.EMAIL_PORT 
-export const EMAIL_USER = process.env.EMAIL_USER 
-export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD 
+export const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY || "amarsonarbangla@@11349";
+export const JWT_EXPIRE_TIME =  30 * 24 * 60 * 1000 ;
+export const EMAIL_HOST = process.env.EMAIL_HOST || "smtp.gmail.com"
+export const EMAIL_PORT = process.env.EMAIL_PORT || 587
+export const EMAIL_USER = process.env.EMAIL_USER || "anonymousmanik@gmail.com"
+export const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || "mckvsyxkyzpxqdku"

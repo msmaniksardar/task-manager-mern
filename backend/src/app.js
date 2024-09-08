@@ -41,11 +41,14 @@ app.use("/api" , router);
 
 // Handle Client errors
 app.use((req, res, next) => {
-   createHttpError(404 , "BAD URL REQUEST")
-   next();
+
+   next(createHttpError(404 , "BAD URL REQUEST"));
   });
   
   // Handle server errors
   app.use((err, req, res, next) => {
-    createHttpError( 500 ,`INTERNAL SERVER ERROR${err}`)
+    return res.status(err.status || 500).json({
+        success: false,
+        message: err.message,
+    })
   });
