@@ -1,6 +1,7 @@
 import React from "react";
 import BackgroundImage from "../components/BackgroundImage";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const ForgetPasswordPage = () => {
   return (
     <BackgroundImage>
@@ -18,7 +19,9 @@ const ForgetPasswordPage = () => {
 
           <span className="text-md font-bold text-black m-auto mt-8">
             Have an account ?
-            <span className="text-md font-bold text-green-600"> Sign In</span>
+            <Link to="/">
+              <span className="text-md font-bold text-green-600"> sign in</span>
+            </Link>
           </span>
         </div>
       </div>

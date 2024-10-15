@@ -38,7 +38,6 @@ const NewTask = () => {
                     </div>
                 </div>
             </div>
-
             <div className='flex flex-col gap-3 mt-5'>
                 <div className='card-task shadow p-5 '>
                     <h2>Task Title </h2>

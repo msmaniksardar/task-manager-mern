@@ -1,6 +1,7 @@
 import React from "react";
 import BackgroundImage from "../components/BackgroundImage";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const SignUpPage = () => {
   return (
     <BackgroundImage>
@@ -39,7 +40,7 @@ const SignUpPage = () => {
 
           <span className="text-md font-bold text-black m-auto mt-5">
             Have an account ?
-            <span className="text-md font-bold text-green-600"> Sign In</span>
+           <Link to="/"> <span className="text-md font-bold text-green-600"> Sign In</span></Link>
           </span>
         </div>
       </div>
