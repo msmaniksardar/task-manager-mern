@@ -1,13 +1,15 @@
 import React from 'react'
 import BackgroundImage from '../components/BackgroundImage'
 import { FaArrowRight } from 'react-icons/fa6'
+import Navbar from '../components/Navbar'
 
 
 
 const UpdateProfile = () => {
     return (
         <BackgroundImage>
-            <div className='flex flex-col items-center relative top-48'>
+            <Navbar/>
+            <div className='flex flex-col items-center relative top-28'>
                 <div className='flex flex-row items-start w-80 md:w-96'>
                     <h1 className="text-3xl font-bold mb-10">Update Profile</h1>
                 </div>

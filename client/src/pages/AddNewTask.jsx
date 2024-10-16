@@ -1,10 +1,15 @@
 import React from 'react'
 import BackgroundImage from '../components/BackgroundImage'
 import { FaArrowRight } from 'react-icons/fa6'
+import { Authenticate } from '../controllers/authenticationController'
 
 
 
 const AddNewTask = () => {
+
+    Authenticate.getToken(); 
+    console.log(Authenticate.accessToken);
+
     return (
         <BackgroundImage>
             <div className='flex flex-col items-center relative top-52'>

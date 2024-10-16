@@ -10,6 +10,8 @@ import AddNewTask from '../pages/AddNewTask';
 import UpdateProfile from '../pages/UpdateProfile';
 import SignUpPage from '../pages/SignUpPage';
 import ForgetPasswordPage from '../pages/ForgetPasswordPage';
+import PinVerification from '../pages/PinVerification';
+import ResetPassword from '../pages/ResetPassword';
 
 const Api = () => {
   return (
@@ -23,13 +25,15 @@ const Api = () => {
             <Route path='/canceled-task' element={<CanceledTask />} />
             <Route path='/progress-task' element={<ProgressTask />} />
             <Route path='/add-new-task' element={<AddNewTask />} />
-            <Route path='/update-profile' element={<UpdateProfile />} />
           </Route>
 
           <Route>
             <Route path='/' element={<SignInPage />} />
             <Route path='/sign-up' element={<SignUpPage />} />
             <Route path='/forget-password' element={<ForgetPasswordPage />} />
+            <Route path='/update-profile' element={<UpdateProfile />} />
+            <Route path='/pin-verify' element={<PinVerification />} />
+            <Route path='/reset-password' element={<ResetPassword />} />
           </Route>
 
         </Routes>

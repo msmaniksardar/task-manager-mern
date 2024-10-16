@@ -14,7 +14,11 @@ const Layout = () => {
 
 
 
-
+            <div class="fixed bottom-10 right-5">
+                <button class="bg-green-500 text-white p-4 rounded-md shadow">
+                    +
+                </button>
+            </div>
         </div>
     )
 }
