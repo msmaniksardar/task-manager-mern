@@ -18,7 +18,6 @@ const Api = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<SignInPage />} />
           <Route element={<Layout />}>
             <Route path='/new-task' element={<NewTask />} />
             <Route path='/completed-task' element={<CompletedTask />} />

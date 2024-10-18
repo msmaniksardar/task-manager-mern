@@ -1,10 +1,21 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { Authenticate } from '../controllers/authenticationController'
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
+
+  // Logout function
+  const logout = () => {
+    Authenticate.clearUser(); // Clears the token from localStorage and in-memory
+    navigate("/", { replace: true }); // Redirect to sign-in page
+  };
+
+
     return (
         <div className=''>
-            <div className="navbar bg-green-400">
+            <div className="navbar fixed top-0 bg-green-400 ">
                 <div className='container flex flex-row justify-between m-auto'>
                     <div className='flex flex-row hidden md:block'>
                         <ul className='flex flex-row gap-3'>
@@ -33,7 +44,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                                 <li><NavLink to="/update-profile">Update Profile</NavLink></li>
-                                <li><a>Logout</a></li>
+                                <li><button onClick={logout}>Logout</button></li>
                             </ul>
                         </div>
                         <div className='flex flex-col gap-0'>

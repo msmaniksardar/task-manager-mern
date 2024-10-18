@@ -4,6 +4,7 @@ export class Authenticate {
 
     static setToken = (token) => {
         localStorage.setItem(this.accessTokenKey, JSON.stringify(token));
+        
     }
 
     static getToken = () => {

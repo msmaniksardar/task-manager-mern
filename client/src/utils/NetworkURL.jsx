@@ -5,6 +5,10 @@ export class NetworkURL {
     static RecoverVerifyEmailURL = `${NetworkURL.BaseURL}/RecoverVerifyEmail`;
     static RecoverVerifyOTPURL = `${NetworkURL.BaseURL}/RecoverVerifyOTP`;
     static RecoverResetPasswordURL = `${NetworkURL.BaseURL}/RecoverResetPassword`;
+    static createTaskURL = `${NetworkURL.BaseURL}/createTask`;
+    static listTaskByStatusURL = `${NetworkURL.BaseURL}/listTaskByStatus`;
+    static deleteTaskURL = `${NetworkURL.BaseURL}/deleteTask`;
+    static updateTaskStatusURL = `${NetworkURL.BaseURL}/updateTaskStatus`;
 }
 
 

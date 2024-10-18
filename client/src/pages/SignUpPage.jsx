@@ -24,15 +24,6 @@ const SignUpPage = () => {
     password: yup.string().min(6, "Password must be at least 6 characters").required("Password is required")
   });
 
-  const handleRespone = () => {
-    if (data && data.status === "success") {
-      toast.success("Login Successfully");
-
-    }
-    if (isError && isError.status === "fail") {
-      toast.error(isError.data || "Login failed");
-    }
-  };
 
 
 

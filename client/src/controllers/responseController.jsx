@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify'; // Ensure toast is imported
 
 
-export const successResponse = (response, { message = "successful"}) => {
+export const successResponse = (response, { message = "successful" }) => {
     if (response.status === "success") {
         toast.success(message);
     }

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BackgroundImage from "../components/BackgroundImage";
 import { FaArrowRight } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,8 +13,23 @@ import { Authenticate } from "../controllers/authenticationController";
 import { errorResponse, successResponse } from "../controllers/responseController";
 
 const SignInPage = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { isLoading } = useSelector((state) => state.taskManager);
+
+
+  // check login or logout 
+
+
+  useEffect(() => {
+    Authenticate.getToken();
+    if (Authenticate.isLoggedIn()) {
+      navigate("/new-task", { replace: true });
+    } else {
+      navigate("/", { replace: true });
+    }
+  }, [navigate]); // Added 'navigate' to the dependency array
+
 
   // Validation schema
   const validationSchema = yup.object({
@@ -43,13 +58,17 @@ const SignInPage = () => {
           Authenticate.setToken(response.token);
           resetForm();
           dispatch(resetState()); // Reset the state after success
-
+          navigate("/new-task", { replace: true })
         })
         .catch((error) => {
           errorResponse(error, { message: error.data })
         });
     }
   });
+
+
+
+
 
   return (
     <BackgroundImage>
