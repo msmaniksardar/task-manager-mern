@@ -16,3 +16,6 @@ export class NetworkMethod {
     static POST = "POST";
     static GET = "GET";
 } 
+
+
+
