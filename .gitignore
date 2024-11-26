@@ -28,6 +28,7 @@ build/Release
 
 # Dependency directories
 node_modules
+.env
 jspm_packages
 
 # Optional npm cache directory
@@ -50,4 +51,4 @@ public/
 *.njsproj
 *.sln
 *.sw?
-.env
+
