@@ -5,7 +5,7 @@ import { apiRequest } from '../features/taskManager/FutureSlice';
 import { NetworkMethod, NetworkURL } from '../utils/NetworkURL';
 import { Authenticate } from '../controllers/authenticationController';
 import { Link } from 'react-router-dom';
-import { deleteTaskService, updateTaskStatus } from '../services/apiService';
+import { deleteTaskService, taskStatusCountRequest, updateTaskStatus } from '../services/apiService';
 import { ToastContainer } from 'react-toastify';
 
 const NewTask = () => {
@@ -18,9 +18,10 @@ const NewTask = () => {
   const token = Authenticate.getToken(); // Fetch token from localStorage
 
 
-console.log(data);
+
 
   useEffect(() => {
+    dispatch(taskStatusCountRequest());
     dispatch(apiRequest({
       method: NetworkMethod.GET,
       url: `${NetworkURL.listTaskByStatusURL}/${status}`,

@@ -57,3 +57,28 @@ export const updateTaskStatus = (id, status) => async (dispatch) => {
 
 
 };
+
+
+
+// Thunk function to update task status
+export const taskStatusCountRequest = () => async (dispatch) => {
+
+    await dispatch(
+        apiRequest({
+            method: NetworkMethod.GET, // Use PUT or PATCH method for updating
+            url: NetworkURL.taskStatusCountURL,
+            headers: {
+                "Content-Type": "application/json",
+                token: token, // Send token in Authorization header
+            },
+        })
+    ).unwrap()
+        .then((response) => {
+
+            console.log(response);
+        }
+        )
+        .catch((error) => console.log(error)) // Unwraps the response directly
+
+
+};

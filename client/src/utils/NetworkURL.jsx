@@ -1,5 +1,5 @@
 export class NetworkURL {
-    static BaseURL = "http://152.42.163.176:2006/api/v1";
+    static BaseURL = "http://35.73.30.144:2005/api/v1";
     static loginURL = `${NetworkURL.BaseURL}/login`;
     static registerURL = `${NetworkURL.BaseURL}/registration`;
     static RecoverVerifyEmailURL = `${NetworkURL.BaseURL}/RecoverVerifyEmail`;
@@ -9,6 +9,7 @@ export class NetworkURL {
     static listTaskByStatusURL = `${NetworkURL.BaseURL}/listTaskByStatus`;
     static deleteTaskURL = `${NetworkURL.BaseURL}/deleteTask`;
     static updateTaskStatusURL = `${NetworkURL.BaseURL}/updateTaskStatus`;
+    static taskStatusCountURL = `${NetworkURL.BaseURL}/taskStatusCount`;
 }
 
 
